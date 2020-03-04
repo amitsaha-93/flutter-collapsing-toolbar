@@ -3,7 +3,6 @@ import 'package:iota/models/category.dart';
 import 'package:iota/utils/text_style.dart';
 
 import '../../utils/common_colors.dart';
-import '../../utils/local_images.dart';
 
 class CategoryItemGrid extends StatelessWidget {
   CategoryModel categoryModel;
@@ -13,12 +12,11 @@ class CategoryItemGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQueryData = MediaQuery.of(context);
-    return InkWell(
+    return new InkWell(
       onTap: () {
 
       },
-      child: Container(
+      child: new Container(
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -26,8 +24,8 @@ class CategoryItemGrid extends StatelessWidget {
           ],
           borderRadius: BorderRadius.all(Radius.circular(12)),
         ),
-        child: Center(
-          child: Wrap(
+        child: new Center(
+          child: new Wrap(
             children: <Widget>[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,7 +35,7 @@ class CategoryItemGrid extends StatelessWidget {
                   Container(
                     height: 70,
                     width: 70,
-                    child: Image.asset(
+                    child: new Image.asset(
                       categoryModel.icon,
                       fit: BoxFit.fill,
                     ),
@@ -46,9 +44,9 @@ class CategoryItemGrid extends StatelessWidget {
                   Padding(padding: EdgeInsets.only(top: 7.0)),
                   Padding(
                     padding: const EdgeInsets.only(left: 4.0, right: 4.0),
-                    child: Container(
+                    child: new Container(
                       margin: EdgeInsets.only(left: 4,right: 4),
-                      child: Text(
+                      child: new Text(
                         categoryModel.title,
                         textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,

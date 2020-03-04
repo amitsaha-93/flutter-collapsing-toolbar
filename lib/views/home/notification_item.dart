@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iota/models/notification.dart';
 import 'package:iota/utils/text_style.dart';
 
-import '../../utils/local_images.dart';
-
 class NotificationItemView extends StatelessWidget {
   NotificationModel notification;
 
@@ -12,16 +10,16 @@ class NotificationItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final userImage = Container(
+    final userImage = new Container(
       height: 50,
       width: 50,
-      child: Image.asset(notification.icon),
+      child: new Image.asset(notification.icon),
     );
 
-    final tvTitle = Container(
+    final tvTitle = new Container(
       width: double.infinity,
       padding: EdgeInsets.only(left: 12, right: 8),
-      child: Text(
+      child: new Text(
         notification.title,
         textAlign: TextAlign.left,
         maxLines: 1,
@@ -34,50 +32,50 @@ class NotificationItemView extends StatelessWidget {
       ),
     );
 
-    final tvDate = Container(
+    final tvDate = new Container(
       padding: EdgeInsets.only(left: 12, right: 8, top: 5),
-      child: Text(
+      child: new Text(
         notification.date,
         textAlign: TextAlign.center,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         style: CommonStyle.getAppFont(
             fontSize: 13,
-            color: Color(0xFF00A9F4),
+            color: new Color(0xFF00A9F4),
             fontStyle: FontStyle.normal,
             fontWeight: FontWeight.w400),
       ),
     );
 
-    final tvTime = Container(
+    final tvTime = new Container(
       padding: EdgeInsets.only(left: 12, right: 8, top: 5),
-      child: Text(
+      child: new Text(
         notification.time,
         textAlign: TextAlign.center,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         style: CommonStyle.getAppFont(
             fontSize: 13,
-            color: Color(0xFF00A9F4),
+            color: new Color(0xFF00A9F4),
             fontStyle: FontStyle.normal,
             fontWeight: FontWeight.w400),
       ),
     );
 
-    return Container(
+    return new Container(
       padding: EdgeInsets.only(left: 8, right: 8),
-      child: Column(
+      child: new Column(
         children: <Widget>[
-          Row(
+          new Row(
             children: <Widget>[
               userImage,
-              Flexible(
+              new Flexible(
                 flex: 1,
-                child: Column(
+                child: new Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     tvTitle,
-                    Row(
+                    new Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[tvDate, tvTime],
                     ),
@@ -86,10 +84,10 @@ class NotificationItemView extends StatelessWidget {
               ),
             ],
           ),
-          Container(
+          new Container(
             margin: EdgeInsets.only(top: 4, bottom: 4),
-            child: Divider(
-              color: Color(0xFF4150B5),
+            child: new Divider(
+              color: new Color(0xFF4150B5),
             ),
           ),
         ],

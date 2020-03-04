@@ -6,6 +6,20 @@ import 'package:iota/models/notification.dart';
 import '../../utils/local_images.dart';
 
 class HomeViewModel with ChangeNotifier {
+  List<String> titleList = [
+    "Malaika Shen",
+    "Api Karim",
+    "Beder Meye",
+    "Marjukh Rasel",
+    "Hero Alam"
+  ];
+  List<String> iconList = [
+    LocalImages.ic_user,
+    LocalImages.ic_user_2,
+    LocalImages.ic_user_3,
+    LocalImages.ic_user_4,
+    LocalImages.ic_user_5,
+  ];
   List<NotificationModel> notificationList = new List();
   List<CategoryModel> categoryList = new List();
 
